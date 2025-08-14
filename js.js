@@ -1,6 +1,17 @@
 // const num1 = 
 // const num2 =
-// const operator =
+const operator = document.getElementsByClassName('operator-button');
+const display = document.getElementById('display');
+
+function appendToDisplay(input) {
+    display.value += input;
+
+}
+
+function clearDisplay(){
+    display.value = "";
+
+}
 
 
 function add(a, b) {
