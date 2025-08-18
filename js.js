@@ -94,29 +94,20 @@ clear.addEventListener('click', () => {
 
 function updateDisplay(value) {
 function updateDisplay(value) {
-    let stringValue = String(value); // Ensure it's a string
+    let stringValue = String(value); 
 
-    // Reset font size first, then adjust
-    display.style.fontSize = '24px'; // Default font size
+    display.style.fontSize = '24px'; 
 
-    if (stringValue.length > 9) { // Example threshold, adjust as needed
-        display.style.fontSize = '18px'; // Smaller font
+    if (stringValue.length > 9) { 
+        display.style.fontSize = '18px'; 
     }
-    if (stringValue.length > 12) { // Even smaller for very long numbers
+    if (stringValue.length > 12) { 
         display.style.fontSize = '14px';
     }
-    // You could also calculate dynamically:
-    // const maxChars = 10; // Max characters at full size
-    // if (stringValue.length > maxChars) {
-    //     const reductionFactor = (stringValue.length - maxChars) * 2; // Reduce by 2px per extra char
-    //     let newSize = 24 - reductionFactor;
-    //     if (newSize < 12) newSize = 12; // Minimum font size
-    //     display.style.fontSize = `${newSize}px`;
-    // }
 
 
-    display.textContent = stringValue; // Update the display
-    currentDisplayValue = stringValue; // Keep your state variable updated
+    display.textContent = stringValue; 
+    currentDisplayValue = stringValue; 
 }
 }
 
